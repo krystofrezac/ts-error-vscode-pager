@@ -1,0 +1,21 @@
+{
+  "name": "ts-error-vscode-pager",
+  "version": "0.1.0",
+  "sources": {
+    "dir": "src",
+    "subdirs": true
+  },
+  "package-specs": {
+    "module": "commonjs",
+    "in-source": false
+  },
+  "suffix": ".js",
+  "bs-dependencies": [
+    "@rescript/core",
+    "rescript-nodejs"
+  ],
+  "external-stdlib": "@rescript/std",
+  "bsc-flags": [
+    "-open RescriptCore"
+  ]
+}

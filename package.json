@@ -1,0 +1,24 @@
+{
+  "name": "ts-error-vscode-pager",
+  "version": "0.0.0",
+  "author": "Kryštof Řezáč",
+  "bin": {
+    "ts-error-vscode-pager": "./bin/ts-error-vscode-pager"
+  },
+  "files": [
+    "lib",
+    "bin"
+  ],
+  "scripts": {
+    "build": "rescript build",
+    "dev": "rescript build -w"
+  },
+  "dependencies": {
+    "@rescript/core": "^0.3.1",
+    "@rescript/std": "^10.1.4",
+    "rescript-nodejs": "^14.4.0"
+  },
+  "devDependencies": {
+    "rescript": "^10.1.4"
+  }
+}
