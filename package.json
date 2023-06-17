@@ -12,12 +12,12 @@
   "scripts": {
     "bundle": "esbuild lib/js/src/Main.js --bundle --outfile=dist/ts-error-vscode-pager.js --platform=node",
     "build": "rescript build",
-    "dev": "rescript build -w"
-  },
-  "dependencies": {
-    "esbuild": "^0.18.4"
+    "dev": "rescript build -w",
+    "format": "rescript format",
+    "prepare-publish": "npm run build && npm run bundle"
   },
   "devDependencies": {
+    "esbuild": "^0.18.4",
     "@rescript/core": "^0.3.1",
     "rescript-nodejs": "^14.4.0",
     "rescript": "^10.1.4"
