@@ -32,13 +32,18 @@ let extractFilePaths = (input: array<string>) => {
   ->groupSameFiles
 }
 
+let indexToHumanIndex = index => index + 1
+
 let run = async () => {
   let filePaths = (await Input.readFromStdin())->extractFilePaths
+  let stringFilePathsLength = Array.length(filePaths)->indexToHumanIndex->Int.toString
 
-  Console.log(`\n\nTo continue close the opened file`)
+  Console.log("\nTo continue close the opened file\n")
 
-  filePaths->Array.forEach(file => {
-    Console.log(` - Opening ${file}`)
+  filePaths->Array.forEachWithIndex((file, index) => {
+    let stringIndex = index->indexToHumanIndex->Int.toString
+
+    Console.log(` - Opening ${file} [${stringIndex}/${stringFilePathsLength}]`)
     VsCode.openFile(file, ~wait=true, ())
   })
 }
