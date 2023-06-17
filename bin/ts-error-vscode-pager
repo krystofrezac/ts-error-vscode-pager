@@ -1,2 +1,2 @@
 #!/usr/bin/env node
-require("../lib/js/src/Main.js")
+require("../dist/ts-error-vscode-pager")

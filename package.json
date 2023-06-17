@@ -6,19 +6,20 @@
     "ts-error-vscode-pager": "./bin/ts-error-vscode-pager"
   },
   "files": [
-    "lib",
-    "bin"
+    "bin",
+    "dist"
   ],
   "scripts": {
+    "bundle": "esbuild lib/js/src/Main.js --bundle --outfile=dist/ts-error-vscode-pager.js --platform=node",
     "build": "rescript build",
     "dev": "rescript build -w"
   },
   "dependencies": {
-    "@rescript/core": "^0.3.1",
-    "@rescript/std": "^10.1.4",
-    "rescript-nodejs": "^14.4.0"
+    "esbuild": "^0.18.4"
   },
   "devDependencies": {
+    "@rescript/core": "^0.3.1",
+    "rescript-nodejs": "^14.4.0",
     "rescript": "^10.1.4"
   }
 }

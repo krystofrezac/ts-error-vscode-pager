@@ -14,7 +14,6 @@
     "@rescript/core",
     "rescript-nodejs"
   ],
-  "external-stdlib": "@rescript/std",
   "bsc-flags": [
     "-open RescriptCore"
   ]
